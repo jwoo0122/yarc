@@ -1,3 +1,5 @@
+import external from 'rollup-plugin-peer-deps-external'
+import resolve from '@rollup/plugin-node-resolve'
 import typescript from '@rollup/plugin-typescript'
 
 export default {
@@ -5,8 +7,13 @@ export default {
   output: {
     dir: 'out',
     format: 'esm',
+    sourcemap: true,
   },
   plugins: [
-    typescript(),
+    external(),
+    resolve(),
+    typescript({
+      tsconfig: 'tsconfig.json',
+    }),
   ],
 }
