@@ -46,6 +46,9 @@
     "react-dom": ">=17.0.0"
   },
   "dependencies": {
-    "@octokit/rest": "^18.0.12"
+    "@octokit/rest": "^18.0.12",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3"
   }
 }
